@@ -50,7 +50,6 @@ export const App = () => {
   };
 
   const filterContacts = () => {
-    const { contacts, filter } = this.state;
 
     const filteredContacts = contacts.filter(contact =>
       contact.name.toLowerCase().includes(filter.toLowerCase())
@@ -59,8 +58,7 @@ export const App = () => {
   };
 
   const delContact = id => {
-    const { contacts } = this.state;
-
+  
     const filtered = contacts.filter(item => item.id !== id);
     setContacts(filtered);
   };
